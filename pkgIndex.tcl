@@ -1,3 +1,1 @@
-package ifneeded wormSegmenter 0.0 [list load [file join $dir wormSegmenter.so]]
-# package provide wormSegmenter 0.0
-
+package ifneeded wormsegmenter 0.0 [list load [file join $dir wormsegmenter.so]]

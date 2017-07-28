@@ -1,3 +1,3 @@
-puts [ ::pkg::create -name wormSegmenter \
+puts [ ::pkg::create -name wormsegmenter \
                      -version 0.0 \
-                     -load wormSegmenter.so ]
+                     -load wormsegmenter.so ]
