@@ -6,7 +6,7 @@
 #include <string>
 #include <iostream>
 #include "wormSegmenter.h"
-wormSegmenter::Arguments cla = {"Proj","data/","output.txt",7,1000,".jpg",640,480,200,400,100,3,25,0.9,"wormSeg.log",true};
+wormSegmenter::Arguments cla = {"Proj","/home/zombaki/Project/Test Data/32000/640x480/","output.txt",7,8000,".jpg",720,480,200,400,100,3,25,0.9,"wormSeg.log",true};
 std::string wormSegmenter::NumberToString(int pNumber) {
     std::ostringstream oOStrStream;
     oOStrStream << pNumber;
@@ -64,11 +64,11 @@ int wormSegmenter::findCentroidFromImage(wormSegmenter::Arguments &cla,cv::Mat s
 
     return 0;
 }
-int wormSegmenter::wormSegmenterF(int fileNumber) {
+int wormSegmenter::wormSegmenterF(int fileNumber,int x,int y) {
 
     static int result[3];
-    int adjustX = 0, adjustY = 0,x=-1,y=-1,area=-1;
-        std::cout<<"File Number : \t"<<fileNumber<<std::endl;
+    int adjustX = 0, adjustY = 0,area=-1;;
+        //std::cout<<"File Number : \t"<<fileNumber<<std::endl;
 
         // File name of each file including the path.
         std::string fileName = cla.input + intToFileName("0000000", fileNumber) + cla.extension;
@@ -104,7 +104,7 @@ int wormSegmenter::wormSegmenterF(int fileNumber) {
         result[1]=y;
         result[2]=area;
 
-    return result[0];
+    return result[2];
 }
 
 

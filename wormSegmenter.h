@@ -22,7 +22,7 @@ public:
     bool verbose;
 } ;
 public :
-	static int wormSegmenterF(int fileNumber);
+	static int wormSegmenterF(int fileNumber,int x,int y);
 	static int findCentroidFromImage(Arguments &cla,cv::Mat src, int *pX, int *pY, int *pArea);
 	static std::string intToFileName(std::string fileNameFormat, int fileNumber);
     static std::string NumberToString(int pNumber);
